@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="pokedex" content="pokedex">
+    <title>PokéDex!</title>
+    <!-- icono favicon -->
+    <link href="/assets/img/favicon-dex.ico" rel="icon" type="image/x-icon" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- canvas JS Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/jquery.canvasjs.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!-- Hoja de estilo propia -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+  </head>
+
+  <body>
+
+    <header class="mb-0">
+      <!-- Logo -->
+      <div class="logo-header container-fluid">
+        <img src="assets/img/logo-header.png" class="logo-img" id="logo-junto">
+        <!-- <img src="assets/img/pDex-closed.png" class="logo-img" id="pDex-closed">
+        <img src="assets/img/pDex_logoclaro.png" class="logo-img" id="pDex-logo">
+        <img src="assets/img/pDex-open.png" class="logo-img" id="pDex-open"> -->
+      </div>
+    </header>
+
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-rojo p-4">
+
+          <!-- Contenido toggleable -->
+          <div class="col-lg-12 text-center">
+            <h1 class="mt-5">¡Hola!</h1>
+            <p class="lead">Busca tu pokemon con sus stats de base ya sea...</p>
+          </div>
+    
+          <!-- Formulario -->
+          <div class="col-lg-12 text-center">
+            <form id="formP">
+              <div class="form-group row">
+                <label for="numberP" class="col-md-6 col-form-label">Por su número:</label>
+                <div class="col-md-6">
+                  <input type="number" class="form-control" id="numberP" placeholder="entre 1 y 807">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <button type="submit" class="btn btn-primary">Consultar</button>
+                </div>
+              </div>
+            </form>
+            <!-- Final del formulario -->
+          </div>
+          <!-- Formulario 2 -->
+          <div class="col-lg-12 text-center">
+            <form id="formN">
+              <div class="form-group row">
+                <label for="numberP" class="col-md-6 col-form-label">O por su nombre:</label>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="textN" placeholder="ej. pikachu">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <button type="submit" class="btn btn-primary">Consultar</button>
+                </div>
+              </div>
+            </form>
+            <!-- Final del formulario -->
+          </div>
+        </div>
+      </div>
+      
+      <nav class="navbar navbar-dark bg-transparent">
+        <button class="navbar-toggler px-4 py-5 shadow-lg" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-question"></i>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Video música, temas iniciales de pokemon:
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/wUohY9kkt7o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-->
+
+    <!-- Page Content -->
+    <!-- <div class="container"> -->
+
+      
+
+      <div class="col-md-12 text-center results my-3">
+        <div class="row">
+          <!-- <div> Donde se inyectaran los datos luego de la consulta a la API -->
+          <div class="col-md-4 pokeInfo"></div>
+         <div class="col-md-8 pStats" style="height: 300px; width: 500px;"></div>
+        </div>
+      </div>
+
+
+      <!-- Buscador sección cartas Pokemon-->
+      <!-- <div class="col-lg-12 text-center">
+        <form id="formS">
+          <div class="form-group row">
+            <label for="anythingSearch" class="col-md-6 col-form-label">Ingrese nombre de pokemon</label>
+            <div class="col-md-6">
+            <input class="form-control" id="anythingSearch" type="text" placeholder="Ingresa un nombre de pokemon">
+            </div>
+          </div>
+            <div class="form-group row">
+              <div class="col-md-12">
+          <button class="btn btn-info my-3">Buscar</button>
+        </div>
+        </div>
+    </form>
+    </div> -->
+
+      <!-- Cartas Pokemon -->
+      <!-- <div id="poke_container" class="poke-container"></div> -->
+
+
+      <footer class="container-fluid bg-rojo">
+        <div class="row m-auto">
+          <div class="col-12">
+            <p>Un sitio de código abierto hecho por Eligna, con ayuda de la Pokéapi.
+              Todos los derechos reservados para © Nintendo, Game Freak y The Pokémon Company.</p>
+          </div>
+        </div>
+      </footer>
+
+    <!-- </div> -->
+
+
+    <!-- Script principal -->
+    <script src="assets/js/script.js"></script>
+    <!-- Script experimental -->
+    <!-- <script src="assets/js/script2.js"></script> -->
+
+  </body>
+
+</html>
